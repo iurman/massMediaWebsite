@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding does not affect the total width of elements */
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    text-align: center; /* Center text by default */
+}
+
+section {
+    width: 100%; /* Ensure each section takes full width */
+    padding: 50px 0; /* Add padding on top and bottom for spacing, adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Full-width background color for history */
+#history {
+    background-color: #EFEFEF; /* Example color */
+}
+
+/* Full-width background image for impact */
+#impact {
+    background-image: url('your-image-url.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Adjusted font size and style for the home section */
+#home h1 {
+    font-size: 48px; /* Make the title larger */
+    color: #fff; /* Ensure text color contrasts well with the background */
+}
+
+/* Adjusted font sizes for headings and paragraphs */
+h2 {
+    font-size: 32px; /* Adjust size as needed for visibility */
+}
+
+p {
+    font-size: 18px; /* Make paragraph text slightly larger */
+}
+
+nav#navbar {
+    list-style-type: none;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Make sure navbar is above other content */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+/* Navbar styling */
+nav#navbar ul {
+    list-style-type: none;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for the navbar */
+    justify-content: center; /* Center flex items horizontally */
+    padding: 20px 0; /* Increase padding */
+}
+
+nav#navbar li {
+    display: inline;
+    margin: 0 10px; /* Adjust spacing around navbar items */
+}
+
+nav#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+/* Removed conflicting max-width and margin settings */
+/* Ensures background covers each section fully */
+#home, #history, #impact, #ethical, #sources {
+    background-color: #363636;
+}
+
+/* Specific background adjustments */
+#home {
+    height: 100vh; /* 100% of the viewport height */
+    background-image: url('img/home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically and horizontally */
+    text-align: center;
+}
+
+#history {
+    background-color: #363636; /* Light grey background */
+    color: #ffffff; /* Assuming a dark background image for contrast */
+}
+
+#impact {
+    background-image: url('another-image-url.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Assuming a dark background image for contrast */
+    padding: 50px 0; /* Adjusted to add more padding at the top and bottom */
+}
+
+/* Spacing under the "Analysis of the impact" text */
+#impact p {
+    margin-bottom: 30px; /* Adds more space under the paragraph */
+}
+
+/* Grid Layout for Figures */
+#impact .figure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust for larger figures */
+    gap: 30px; /* Increase the gap if needed */
+    padding: 20px;
+}
+
+#ethical {
+    background-color: #DDEEFF; /* Light blue background */
+}
+
+#sources {
+    background-color: #F0F0F0; /* Another light grey, different from #history for variety */
+}
+
+section#timeline {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+  }
+  section#timeline:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 0 0 -1px;
+    width: 2px;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+  }
+  section#timeline article {
+    width: 100%;
+    margin: 0 0 20px 0;
+    position: relative;
+  }
+  section#timeline article:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  section#timeline article div.inner {
+    width: 40%;
+    float: left;
+    margin: 5px 0 0 0;
+    border-radius: 6px;
+  }
+  section#timeline article div.inner span.date {
+    display: block;
+    width: 60px;
+    height: 50px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 0 0 -32px;
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: #25303B;
+    color: rgba(255,255,255,0.5);
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 0 7px #25303B;
+  }
+  section#timeline article div.inner span.date span {
+    display: block;
+    text-align: center;
+  }
+  section#timeline article div.inner span.date span.day {
+    font-size: 10px;
+  }
+  section#timeline article div.inner span.date span.month {
+    font-size: 18px;
+  }
+  section#timeline article div.inner span.date span.year {
+    font-size: 10px;
+  }
+  section#timeline article div.inner h2 {
+    padding: 15px;
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+  }
+  section#timeline article div.inner h2:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -5px;
+      width: 10px; 
+      height: 10px;
+    -webkit-transform: rotate(-45deg);
+  }
+  section#timeline article div.inner p {
+    padding: 15px;
+    margin: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #656565;
+    border-radius: 0 0 6px 6px;
+  }
+  section#timeline article:nth-child(2n+2) div.inner {
+    float: right;
+  }
+  section#timeline article:nth-child(2n+2) div.inner h2:after {
+    left: -5px;
+  }
+  section#timeline article:nth-child(1) div.inner h2 {
+    background: #e74c3c;
+  }
+  section#timeline article:nth-child(1) div.inner h2:after {
+    background: #e74c3c;
+  }
+  section#timeline article:nth-child(2) div.inner h2 {
+    background: #2ecc71;
+  }
+  section#timeline article:nth-child(2) div.inner h2:after {
+    background: #2ecc71;
+  }
+  section#timeline article:nth-child(3) div.inner h2 {
+    background: #9b59b6;
+  }
+  section#timeline article:nth-child(3) div.inner h2:after {
+    background: #9b59b6;
+  }
+  section#timeline article:nth-child(4) div.inner h2 {
+    background: #140c8a;
+  }
+  section#timeline article:nth-child(4) div.inner h2:after {
+    background: #140c8a;
+  }
+  section#timeline article:nth-child(5) div.inner h2 {
+    background: #4bccff;
+  }
+  section#timeline article:nth-child(5) div.inner h2:after {
+    background: #4bccff;
+  }
+
+  figure {
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px; /* Ensure there's some space around each figure */
+    max-width: 1400px; /* Adjust this value to fit your design needs */
+    width: 100%; /* This makes the figure responsive, filling the container up to max-width */
+    transition: .4s ease-in-out; /* Smooth transition for any figure transformations */
+}
+
+figure > * {
+    grid-area: 1 / 1; /* Ensure all figure children align in the same grid area */
+}
+
+/* Adjustments to ensure figcaption fits within the figure */
+figure figcaption {
+    display: grid;
+    align-items: end;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.45); /* Semi-transparent background for legibility */
+    transform: translateY(0); /* Initially positioned outside of view */
+    transition: transform 0.4s ease-in-out; /* Smooth reveal on hover */
+    margin: 0; /* Aligns with the figure's edges */
+}
+
+figure figcaption strong {
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between title and detailed text */
+}
+
+
+figure figcaption .detail-text {
+    font-weight: normal;
+    display: none; /* Hide detail text initially */
+}
+figure:hover .detail-text {
+    display: block; /* Show detail text on hover */
+}
+figure img {
+    width: 100%;
+    height: auto; /* Adjust height to maintain aspect ratio */
+    object-fit: cover; /* Cover the figure area */
+    border-radius: 1rem 1rem 0 0; /* Rounded corners at the top */
+}
+
+
+
+figure:hover figcaption {
+    transform: translateY(0); /* Reveal caption on hover */
+}
+
+figure:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+  @supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+     -webkit-mask: none;
+     color: #fff;
+    }
+  }
+
+  .ethical-considerations-container {
+    max-width: 800px; /* Adjust the max width as needed */
+    margin: auto; /* This centers the container */
+    padding: 20px; /* Add some padding inside the container */
+}
+
+/* Add spacing after the introduction paragraph */
+.ethical-introduction {
+    margin-bottom: 40px; /* Space after the introductory text */
+    max-width: 800px;
+}
+
+  #ethical-considerations {
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: left;
+}
+
+.ethical-topic, .discussion-engagement, .further-reading {
+    margin-bottom: 30px;
+}
+
+.ethical-topic h3, .discussion-engagement h3, .further-reading h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ethical-topic img, .discussion-engagement img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.further-reading ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.further-reading li {
+    margin-bottom: 10px;
+}
+
+.further-reading a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Interactive Elements Styling */
+/* Placeholder for any specific styles for interactive elements like graphs, sliders, quizzes, or polls */
+.ethical-considerations-container img {
+    max-width: 800px;
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Centers image in its container */
+    margin: 0 auto; /* Adds automatic margins on both sides to center the image */
+}
+
+.mla-sources {
+    list-style-type: none; /* Removes the default list bullet */
+    padding: 0; /* Removes the default padding */
+    margin: 0; /* Adjusts the margin as needed */
+}
+
+.mla-sources li {
+    text-indent: -0.5in; /* Creates a hanging indent */
+    margin-left: 0.5in; /* Adjusts the margin to align the text correctly */
+    margin-bottom: 10px; /* Adds space between entries for readability */
+    font-family: 'Times New Roman', serif; /* MLA recommends Times New Roman */
+    font-size: 12pt; /* Standard MLA font size */
+}
+
+/* Optional: Style for the publication title in italics */
+.mla-sources em {
+    font-style: italic;
+}
